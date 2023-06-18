@@ -1,7 +1,5 @@
 name: test
 
-permissions: write-all
-
 on:
   push:
     branches:
@@ -12,6 +10,10 @@ on:
 
 jobs:
   test:
+    permissions:
+      contents: read
+      pull-requests: write
+
     runs-on: ubuntu-latest
 
     steps:
